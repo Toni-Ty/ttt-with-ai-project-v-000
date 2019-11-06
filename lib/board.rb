@@ -23,7 +23,7 @@ def position(user_input)
   @cells[user_input -1]
 end
 
-# below also returns false for an in-progress game/it's asking are there none of these? The word "these" being empty cells = false
+# The enumerable method "None" returns true if NO elements are true;  below also returns false for an in-progress game/it's asking are there none of these? The word "these" being empty cells = false
 def full?
   cells.none? {|cell| cell == " " || cell == nil}
 end
@@ -45,4 +45,5 @@ def update(user_input, player)
   user_input = user_input.to_i
   cells[user_input -1] = player.token
   end
+
 end

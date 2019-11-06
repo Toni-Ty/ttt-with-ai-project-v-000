@@ -18,6 +18,9 @@ def initialize (player_1 = Players::Human.new("X"), player_2 = Players::Human.ne
   @board = board
 end
 
+#below utilizes the ternary operator
+# if_this_is_a_true_value ? then_the_result_is_this : else_it_is_this
+
 def current_player
   board.turn_count.even? ? player_1 : player_2
 end
